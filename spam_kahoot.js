@@ -38,12 +38,14 @@ nameArray[28] = "Simon";
 nameArray[29] = "Tristan";
 nameArray[30] = "Zach";
 
+//big test here
 function wait(n){
 	n = n || 1;
 	return new Promise(resolve => {
 		setTimeout(resolve,n * 1000);
 	});
 }
+
 
 function randomNumber(max) {
 	return Math.floor(Math.random() * max);

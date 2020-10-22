@@ -7,7 +7,7 @@ console.log("Joining kahoot...");
 
 client.join(pin, "bruh").catch(err=>{console.log("Failed to join: " + err.description || err.status);});
 
-//client.on("Joined", () => {consold.log("Kahoot joined!")});
+client.on("Joined", () => {console.log("Kahoot joined!")});
 
 client.on("QuizStart", () => {
 	console.log("Quiz started!");

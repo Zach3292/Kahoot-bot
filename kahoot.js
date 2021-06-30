@@ -1,11 +1,12 @@
 const Kahoot = require("kahoot.js-updated");
 const client = new Kahoot();
 
-var pin = 0;
+var pin = prompt('Enter the PIN: ');
+var name = prompt('Choose a name: ');
 
 console.log("Joining kahoot...");
 
-client.join(pin, "bruh").catch(err=>{console.log("Failed to join: " + err.description || err.status);});
+client.join(pin, name).catch(err=>{console.log("Failed to join: " + err.description || err.status);});
 
 client.on("Joined", () => {console.log("Kahoot joined!")});
 
